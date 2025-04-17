@@ -1,10 +1,10 @@
 
 
-kubectl port-forward svc/config-server 8888:88kubectl port-forward svc/config-server 8888:8888 -n petclinic
-kubectl port-forward svc/discovery-server 8761kubectl port-forward svc/discovery-server 8761:8761 -n petclinic
+kubectl port-forward svc/config-server 8888:8888 -n petclinic
+kubectl port-forward svc/discovery-server 8761:8761 -n petclinic
+kubectl port-forward svc/api-gateway 8080:8080 -n petclinic
 
 
-kubectl port-forward svc/discovery-server 8761kubectl port-forward svc/discovery-server 8761:8761 -n 
 
 petclinic
 
