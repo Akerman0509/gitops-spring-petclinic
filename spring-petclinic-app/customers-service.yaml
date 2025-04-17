@@ -1,0 +1,55 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers-service
+  namespace: petclinic
+spec:
+  selector:
+    app: customers-service
+  ports:
+  - port: 8081
+    targetPort: 8081
+  type: ClusterIP
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-service
+  namespace: petclinic
+spec:
+  selector:
+    matchLabels:
+      app: customers-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customers-service
+    spec:
+      containers:
+      - name: customers-service
+        image: springcommunity/spring-petclinic-customers-service
+        ports:
+        - containerPort: 8081
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          initialDelaySeconds: 60
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          initialDelaySeconds: 90
+          periodSeconds: 10
