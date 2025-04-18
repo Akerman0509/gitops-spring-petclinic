@@ -34,6 +34,11 @@ spec:
         image: akerman0509/spring-petclinic-visits-service:ab3ec80
         ports:
         - containerPort: 8082
+
+
+        env:
+          - name: EUREKA_INSTANCE_HOSTNAME
+            value: visits-service
         # resources:
         #   limits:
         #     memory: "512Mi"

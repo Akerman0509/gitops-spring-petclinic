@@ -34,6 +34,10 @@ spec:
         image: akerman0509/spring-petclinic-vets-service:ab3ec80
         ports:
         - containerPort: 8083
+
+        env:
+          - name: EUREKA_INSTANCE_HOSTNAME
+            value: vets-service
         # resources:
         #   limits:
         #     memory: "512Mi"

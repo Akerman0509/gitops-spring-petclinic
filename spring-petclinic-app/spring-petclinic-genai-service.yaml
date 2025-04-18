@@ -57,6 +57,10 @@ spec:
             secretKeyRef:
               name: petclinic-secrets
               key: AZURE_OPENAI_ENDPOINT
+
+        - name: EUREKA_INSTANCE_HOSTNAME
+            value: genai-service
+              
         readinessProbe:
           httpGet:
             path: /actuator/health
