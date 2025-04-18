@@ -34,6 +34,9 @@ spec:
         image: akerman0509/spring-petclinic-api-gateway:ab3ec80
         ports:
         - containerPort: 8080
+        env:
+          - name: EUREKA_INSTANCE_HOSTNAME
+            value: api-gateway
         # resources:
         #   limits:
         #     memory: "512Mi"
