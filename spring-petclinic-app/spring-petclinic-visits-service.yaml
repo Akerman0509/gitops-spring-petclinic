@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: visits-service
-        image: springcommunity/spring-petclinic-visits-service
+        image: akerman0509/spring-petclinic-visits-service:ab3ec80
         ports:
         - containerPort: 8082
         # resources:

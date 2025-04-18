@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: vets-service
-        image: springcommunity/spring-petclinic-vets-service
+        image: akerman0509/spring-petclinic-vets-service:ab3ec80
         ports:
         - containerPort: 8083
         # resources:
