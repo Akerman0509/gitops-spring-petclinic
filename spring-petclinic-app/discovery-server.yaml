@@ -34,13 +34,13 @@ spec:
         image: springcommunity/spring-petclinic-discovery-server
         ports:
         - containerPort: 8761
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-          requests:
-            memory: "256Mi"
-            cpu: "200m"
+        # resources:
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "500m"
+        #   requests:
+        #     memory: "256Mi"
+        #     cpu: "200m"
         readinessProbe:
           httpGet:
             path: /

@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spring-petclinic-app-dev
+  name: spring-petclinic-app-dev2
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/Akerman0509/gitops-spring-petclinic.git
     targetRevision: HEAD
-    path: spring-petclinic-app/
+    path: spring-petclinic-app
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
