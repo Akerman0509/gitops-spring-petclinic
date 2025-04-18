@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: discovery-server
-        image: springcommunity/spring-petclinic-discovery-server
+        image: akerman0509/spring-petclinic-discovery-server:ab3ec80
         ports:
         - containerPort: 8761
         # resources:

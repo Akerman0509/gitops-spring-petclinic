@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: admin-server
-        image: springcommunity/spring-petclinic-admin-server
+        image: akerman0509/spring-petclinic-admin-server:ab3ec80
         ports:
         - containerPort: 9090
         # resources:
