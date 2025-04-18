@@ -15,3 +15,9 @@ kubectl apply -f apply.yaml
 sed -i 's#image: .*#image: akerman0509/spring-petclinic-config-server:v1.0.12#' deployment.yaml
 
 
+change images
+
+
+6c121b9
+
+ab3ec80
