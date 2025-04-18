@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spring-petclinic-app-dev2
+  name: spring-petclinic-app-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
