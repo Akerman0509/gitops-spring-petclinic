@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: genai-service
-        image: springcommunity/spring-petclinic-genai-service
+        image: akerman0509/spring-petclinic-genai-service:ab3ec80
         ports:
         - containerPort: 8084
         # resources:
