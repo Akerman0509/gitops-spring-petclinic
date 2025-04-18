@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: customers-service
-        image: akerman0509/spring-petclinic-customers-service:62210707d1b84c2e868a08ba7ddf5b3d5e392c77
+        image: akerman0509/spring-petclinic-customers-service:ab3ec80
         ports:
         - containerPort: 8081
         # resources:
